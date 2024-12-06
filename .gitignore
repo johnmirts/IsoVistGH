@@ -1,1 +1,19 @@
 .vs/
+.vscode/
+.idea/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# Build results
+bin/
+obj/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+# Backup files
+*.bak
+*.swp
+*.tmp
