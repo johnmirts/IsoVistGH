@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Description of IsoVistGH")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7f82fe0c84f0eafda3af02a56fce8148699b42ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7ab18e7231c1b2352deed073097c89b170c31b32")]
 [assembly: System.Reflection.AssemblyProductAttribute("IsoVistGH")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IsoVistGH")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

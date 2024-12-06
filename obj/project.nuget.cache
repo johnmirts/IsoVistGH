@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NgCqDvXmz1o=",
+  "dgSpecHash": "L7AriepcP5g=",
   "success": true,
   "projectFilePath": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\IsoVistGH.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\johnm\\.nuget\\packages\\grasshopper\\8.0.23304.9001\\grasshopper.8.0.23304.9001.nupkg.sha512",
-    "C:\\Users\\johnm\\.nuget\\packages\\rhinocommon\\8.0.23304.9001\\rhinocommon.8.0.23304.9001.nupkg.sha512"
+    "C:\\Users\\johnm\\.nuget\\packages\\grasshopper\\7.36.23346.16351\\grasshopper.7.36.23346.16351.nupkg.sha512",
+    "C:\\Users\\johnm\\.nuget\\packages\\rhinocommon\\7.36.23346.16351\\rhinocommon.7.36.23346.16351.nupkg.sha512"
   ],
   "logs": []
 }

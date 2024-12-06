@@ -1,0 +1,7 @@
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.csproj.AssemblyReference.cache
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.AssemblyInfoInputs.cache
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.AssemblyInfo.cs
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.csproj.CoreCompileInputs.cache
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.sourcelink.json
+D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net7.0\IsoVistGH.csproj.ResolveComReference.cache
