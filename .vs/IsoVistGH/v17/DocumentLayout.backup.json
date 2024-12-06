@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\mycomponent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:mycomponent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\isovistgh.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:isovistgh.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\obj_component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:obj_component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 4,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,15 +62,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "obj_Component.cs",
               "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\obj_Component.cs",
               "RelativeDocumentMoniker": "obj_Component.cs",
               "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\obj_Component.cs",
               "RelativeToolTip": "obj_Component.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwDAAAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T19:25:46.52Z",
+              "WhenOpened": "2024-12-06T19:47:47.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IsoVistGH",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\IsoVistGH.csproj",
+              "RelativeDocumentMoniker": "IsoVistGH.csproj",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\IsoVistGH.csproj",
+              "RelativeToolTip": "IsoVistGH.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-06T19:41:34.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyComponent1.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\MyComponent1.cs",
+              "RelativeDocumentMoniker": "MyComponent1.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\MyComponent1.cs",
+              "RelativeToolTip": "MyComponent1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:33:55.151Z",
               "EditorCaption": ""
             }
           ]
