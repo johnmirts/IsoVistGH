@@ -1,4 +1,5 @@
-﻿using Grasshopper.Kernel;
+﻿using Grasshopper.GUI.Canvas;
+using Grasshopper.Kernel;
 using Grasshopper.Kernel.Attributes;
 using System.Drawing;
 
@@ -38,5 +39,22 @@ namespace IsoVistGH {
     internal class BaseComponentAttributes : GH_ComponentAttributes {
         internal BaseComponentAttributes(IGH_Component component)
           : base(component) { }
+
+        protected override void Render(GH_Canvas canvas, Graphics graphics, GH_CanvasChannel channel) {
+            if (channel == GH_CanvasChannel.Objects) {
+                // Cache the existing style.
+                GH_PaletteStyle style = GH_Skin.palette_normal_standard;
+
+                // Swap out palette for normal, unselected components.
+                GH_Skin.palette_normal_standard = new GH_PaletteStyle(Color.FromArgb(225, 225, 225), Color.Black, Color.Black);
+
+                base.Render(canvas, graphics, channel);
+
+                // Put the original style back.
+                GH_Skin.palette_normal_standard = style;
+            }
+            else
+                base.Render(canvas, graphics, channel);
+        }
     }
 }
