@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\isovistghinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:isovistghinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\integration\\mycomponent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:integration\\mycomponent1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 4,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,19 +51,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MyComponent1.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\Integration\\MyComponent1.cs",
-              "RelativeDocumentMoniker": "Integration\\MyComponent1.cs",
-              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\Integration\\MyComponent1.cs",
-              "RelativeToolTip": "Integration\\MyComponent1.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwC0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T18:45:15.696Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

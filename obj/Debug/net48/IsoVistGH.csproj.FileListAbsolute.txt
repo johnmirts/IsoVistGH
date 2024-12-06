@@ -8,4 +8,3 @@ D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net48\IsoVist
 D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net48\IsoVistGH.sourcelink.json
 D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net48\IsoVistGH.gha
 D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net48\IsoVistGH.pdb
-D:\OneDrive\Coding\@Personal_GH_plugins (.sln)\IsoVistGH\obj\Debug\net48\IsoVistGH.csproj.ResolveComReference.cache
