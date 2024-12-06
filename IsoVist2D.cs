@@ -48,7 +48,7 @@ namespace IsoVistGH
             Curve[] voidRegions = new Curve[] { };
 
             int curved_segs = 0;
-            foreach (Curve crv in crvs) { curved_segs += Geometry.noCurvedSegs(crv); }
+            foreach (Curve crv in crvs) { curved_segs += Geometry.NoCurvedSegs(crv); }
             Message += "\n" + curved_segs.ToString() + "x curved segment(s)";
             if (curved_segs > 0) {
                 AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "There are " + curved_segs.ToString() + "x curved segment(s) in the provided curves. The accuracy of the query is not ensured. Reconsider and/or try to tesselate the relevant curves. Use the LibraGH provided component if necessary.");
