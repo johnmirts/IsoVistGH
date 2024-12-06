@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\isovistghinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:isovistghinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\obj_component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:obj_component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 4,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +51,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "obj_Component.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\obj_Component.cs",
+              "RelativeDocumentMoniker": "obj_Component.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\obj_Component.cs",
+              "RelativeToolTip": "obj_Component.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:20:12.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 4,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IsoVistGHInfo.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\IsoVistGHInfo.cs",
+              "RelativeDocumentMoniker": "IsoVistGHInfo.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\IsoVistGHInfo.cs",
+              "RelativeToolTip": "IsoVistGHInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:20:54.455Z",
+              "EditorCaption": ""
             }
           ]
         }
