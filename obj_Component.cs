@@ -9,7 +9,7 @@ namespace IsoVistGH {
         private readonly GH_Exposure exposure = GH_Exposure.hidden;
         private readonly Bitmap icon = null;
 
-        public BaseComponent(string _componentName, string _nickname, string _description, string _subcategory, GH_Exposure _exposure, Bitmap _icon)
+        public BaseComponent(string _componentName, string _nickname, string _description, GH_Exposure _exposure, Bitmap _icon)
           : base(_componentName, _nickname, _description, "IsoVistGH", "Standard") {
             exposure = _exposure;
             icon = _icon;
