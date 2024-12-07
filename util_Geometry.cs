@@ -100,6 +100,25 @@ namespace IsoVistGH {
 
         }
         /// <summary>
+        /// Check if two (closed) regions lie on the same plane.
+        /// </summary>
+        /// <param name="region1">
+        /// The firs plane to check.
+        /// </param>
+        /// <param name="region2">
+        /// The second plane to check.
+        /// </param>
+        /// <returns>
+        /// True if regions lie on the same plane, else False.
+        /// </returns>
+        public static bool AreCoplanar(this Curve region1, Curve region2) {
+            if (!region1.IsPlanar() || !region2.IsPlanar()) { return false; }
+            Plane plane = region1.PlaneFromRegion();
+
+            if (region2.PointAtStart.IsPtOnPlane(plane)) { return true; }
+            return false;
+        }
+        /// <summary>
         /// Finds the segment IDs of a curve which are not linear (curved).
         /// </summary>
         /// <param name="crv">
@@ -127,8 +146,6 @@ namespace IsoVistGH {
             }
             return curvedSegIDs;
         }
-
-
         /// <summary>
         /// Find the region that contains the voids. Prerequisite: All regions lie on the same plane.
         /// </summary>
@@ -183,6 +200,15 @@ namespace IsoVistGH {
                 return null;
             }
         }
+        /// <summary>
+        /// Rethrn the number of curved segments that need to be tessellated,
+        /// </summary>
+        /// <param name="crv">
+        /// The curve to evaluate
+        /// </param>
+        /// <returns>
+        /// The number of curved segments.
+        /// </returns>
         internal static int NoCurvedSegs(Curve crv) {
             return CurvedSegIDs(crv).Count;
         }

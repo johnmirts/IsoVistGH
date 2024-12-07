@@ -39,24 +39,34 @@ namespace IsoVistGH
         /// </summary>
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA) {
-            List<Curve> crvs = new List<Curve>();
-            Point3d pt = new Point3d();
-            DA.GetDataList(0, crvs);
-            DA.GetData(1, ref pt);
 
-            Curve masterRegion = new PolyCurve();
-            Curve[] voidRegions = new Curve[] { };
+            #region INPUT
+            if (!DA.TryGetList(0, out List<Curve> crvs)) {
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "The curves input is not valid.");
+                return;
+            }
 
+            if (!DA.TryGetItem(1, out Point3d pt)) {
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "The point input is not valid.");
+                return;
+            }
+            #endregion
+
+            #region WARN ABOUT CURVATURE
             int curved_segs = 0;
             foreach (Curve crv in crvs) { curved_segs += Geometry.NoCurvedSegs(crv); }
             Message += "\n" + curved_segs.ToString() + "x curved segment(s)";
             if (curved_segs > 0) {
-                AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "There are " + curved_segs.ToString() + "x curved segment(s) in the provided curves. The accuracy of the query is not ensured. Reconsider and/or try to tesselate the relevant curves. Use the LibraGH provided component if necessary.");
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "There are " + curved_segs.ToString() + "x curved segment(s) in the provided curves. The accuracy of the query is not ensured. Reconsider and/or try to tesselate the relevant curves. Use the \"Tesselation\" provided component if necessary.");
             }
+            #endregion
 
-            // Checking if point is inside the breps
+            #region CALCULATE ISOVIST
+            Curve masterRegion = new PolyCurve();
+            Curve[] voidRegions = new Curve[] { };
             if (crvs.Count == 0) {
-
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "There are no curves to calculate the isovist.");
+                return;
             }
             else if (crvs.Count == 1) {
                 masterRegion = crvs[0];
@@ -75,6 +85,7 @@ namespace IsoVistGH
 
                 DA.SetDataList(0, Visibility.IsoVist2D(masterRegion, voidRegions, pt));
             }
+            #endregion
         }
 
         /// <summary>
