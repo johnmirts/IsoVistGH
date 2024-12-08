@@ -3,28 +3,11 @@ using Rhino.Geometry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IsoVistGH {
     internal static class Geometry {
         internal static readonly double Tolerance = RhinoDoc.ActiveDoc.ModelAbsoluteTolerance;
         
-        /// <summary>
-        /// Create the cross product from two vectors.
-        /// </summary>
-        /// <param name="vec1">
-        /// The first vector.
-        /// </param>
-        /// <param name="vec2">
-        /// The second vector.
-        /// </param>
-        /// <returns>
-        /// The cross product of two vectors.
-        /// </returns>
-        private static Vector3d VecCrossProd(Vector3d vec1, Vector3d vec2) {
-            return new Vector3d(vec1.Y * vec2.Z - vec1.Z * vec2.Y, vec1.Z * vec2.X - vec1.X * vec2.Z, vec1.X * vec2.Y - vec1.Y * vec2.X);
-        }
         /// <summary>
         /// Check if two vectors are parallel to each other.
         /// </summary>
@@ -62,21 +45,6 @@ namespace IsoVistGH {
                 return false;
             }
             return true;
-        }
-        /// <summary>
-        /// Create the dot product form two vectors.
-        /// </summary>
-        /// <param name="vec1">
-        /// The first vector.
-        /// </param>
-        /// <param name="vec2">
-        /// The second vector.
-        /// </param>
-        /// <returns>
-        /// The dot product of two vectors.
-        /// </returns>
-        private static double VecDotProd(Vector3d vec1, Vector3d vec2) {
-            return (vec1.X * vec2.X + vec1.Y * vec2.Y + vec1.Z * vec2.Z);
         }
         /// <summary>
         /// Check if a set of (closed) regions all lie on the same plane.
@@ -229,6 +197,106 @@ namespace IsoVistGH {
                 return new Plane(pt1, new Vector3d(pt2) - new Vector3d(pt1), new Vector3d(pt3) - new Vector3d(pt1));
             }
             else { return new Plane(); }
+        }
+        /// <summary>
+        /// Check if a point lies on a curve.
+        /// </summary>
+        /// <param name="pt">
+        /// The point to be checked.
+        /// </param>
+        /// <param name="curve">
+        /// The curve that is used as a reference.
+        /// </param>
+        /// <returns>
+        /// True if point lies on the provided curve, else False.
+        /// </returns>
+        public static bool IsPtOnCurve(this Point3d pt, Curve curve) {
+            curve.ClosestPoint(pt, out double t);
+            Point3d cp = curve.PointAt(t);
+            if (pt.DistanceTo(cp) > Tolerance) {
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// Get the orthocanonical bounding box of a planar closed region.
+        /// </summary>
+        /// <param name="region">
+        /// A planar closed region that is inscribed into a bounding box.
+        /// </param>
+        /// <returns>
+        /// (a) The orthocanonical bounding box; (b) the length of the bounding box diagonal.
+        /// </returns>
+        internal static Tuple<Rectangle3d, double> PolygonBoundingBoxProperties(this Curve region) {
+            Plane plane = region.PlaneFromRegion();
+            double tmin = 1e8;
+            double tmax = -1e8;
+            double smin = 1e8;
+            double smax = -1e8;
+            foreach (Point3d pt in region.GetBoundingBox(false).GetCorners()) {
+                bool check = plane.ClosestParameter(pt, out double s, out double t);
+                if (tmin > t) { tmin = t; }
+                if (tmax < t) { tmax = t; }
+                if (smin > s) { smin = s; }
+                if (smax < s) { smax = s; }
+            }
+
+            Point3d pt1 = plane.PointAt(smin, tmin);
+            Point3d pt2 = plane.PointAt(smax, tmax);
+            Rectangle3d rectangle = new Rectangle3d(plane, pt1, pt2);
+
+            return new Tuple<Rectangle3d, double>(rectangle, pt1.DistanceTo(pt2));
+        }
+        /// <summary>
+        /// Get the boolean difference between two sets of (closed) regions lying on the same plane.
+        /// </summary>
+        /// <param name="regionsA">
+        /// The sets of (closed) regions to remove from.
+        /// </param>
+        /// <param name="regionsB">
+        /// The set of (closed) regions to remove with.
+        /// </param>
+        /// <param name="plane">
+        /// The plane where the (closed) regions lie on.
+        /// </param>
+        /// <returns>
+        /// An array of (closed) regions that arise from the boolean difference operation.
+        /// </returns>
+        public static Curve[] DifferenceRegionRegion(Curve[] regionsA, Curve[] regionsB, Plane plane) {
+            // regionsA are the regions to remove from
+            // regionsB are the regions to remove with
+
+            List<Curve> resultCurves = new List<Curve>();
+
+            void BooleanDifferenceRecursive(Curve curve, List<Curve> subtractors) {
+                foreach (Curve subtractorCurve in subtractors) {
+
+                    if (curve.AreCoplanar(subtractorCurve)) {
+                        RegionContainment config = Curve.PlanarClosedCurveRelationship(curve, subtractorCurve, plane, Tolerance);
+                        if (config == RegionContainment.MutualIntersection) {
+                            Curve[] differenceCurves = Curve.CreateBooleanDifference(curve, subtractorCurve, Tolerance);
+
+                            if (differenceCurves != null && differenceCurves.Length > 0) {
+                                curve = differenceCurves[0];
+                                if (differenceCurves.Length > 1) {
+                                    // If extra curves are generated, recursively apply boolean difference
+                                    for (int i = 1; i < differenceCurves.Length; i++) {
+                                        BooleanDifferenceRecursive(differenceCurves[i], subtractors);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                resultCurves.Add(curve);
+            }
+
+            // Apply boolean difference to each curve in regionsA
+            foreach (Curve crvA in regionsA) {
+                BooleanDifferenceRecursive(crvA, regionsB.ToList());
+            }
+
+            return resultCurves.ToArray();
         }
     }
 }

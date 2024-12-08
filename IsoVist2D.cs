@@ -5,8 +5,7 @@ using Rhino.Geometry;
 
 namespace IsoVistGH
 {
-    public class IsoVist2D : BaseComponent
-    {
+    public class IsoVist2D : BaseComponent {
         /// <summary>
         /// Initializes a new instance of the IsoVist2DMyComponent1 class.
         /// </summary>
