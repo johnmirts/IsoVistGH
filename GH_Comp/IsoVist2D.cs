@@ -22,15 +22,15 @@ namespace IsoVistGH
         /// Registers all the input parameters for this component.
         /// </summary>
         protected override void RegisterInputParams(GH_InputParamManager pManager) {
-            pManager.AddCurveParameter("Regions", "C", "The regions for which the isovist polygon is calculated", GH_ParamAccess.list);
-            pManager.AddPointParameter("Point", "P", "The point of view", GH_ParamAccess.item);
+            pManager.AddCurveParameter("Regions", "Curve(s)", "The regions for which the isovist polygon is calculated", GH_ParamAccess.list);
+            pManager.AddPointParameter("Point", "Point", "The point of view", GH_ParamAccess.item);
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
         protected override void RegisterOutputParams(GH_OutputParamManager pManager) {
-            pManager.AddCurveParameter("IsoVist polygon", "P", "The IsoVist 2D polygon", GH_ParamAccess.item);
+            pManager.AddCurveParameter("IsoVist polygon", "IsoVist", "The IsoVist 2D polygon", GH_ParamAccess.item);
         }
 
         /// <summary>

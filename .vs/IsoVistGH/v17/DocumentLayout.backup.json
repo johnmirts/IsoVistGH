@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\util_geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:util_geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\gh_comp\\curvetessellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:gh_comp\\curvetessellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\util_visibility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:util_visibility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\utilities\\util_geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:utilities\\util_geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\curvetessellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:curvetessellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|d:\\onedrive\\coding\\@personal_gh_plugins (.sln)\\isovistgh\\gh_comp\\isovist2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EBFFBAB-8973-4369-B6E8-D87C815E6EB0}|IsoVistGH.csproj|solutionrelative:gh_comp\\isovist2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 4,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,41 +58,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "util_Geometry.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\util_Geometry.cs",
-              "RelativeDocumentMoniker": "util_Geometry.cs",
-              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\util_Geometry.cs",
-              "RelativeToolTip": "util_Geometry.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAQwHMAAAA0AAAAAAAAAA==",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\Utilities\\util_Geometry.cs",
+              "RelativeDocumentMoniker": "Utilities\\util_Geometry.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\Utilities\\util_Geometry.cs",
+              "RelativeToolTip": "Utilities\\util_Geometry.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T05:54:38.473Z",
+              "WhenOpened": "2024-12-08T14:38:41.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "util_Visibility.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\util_Visibility.cs",
-              "RelativeDocumentMoniker": "util_Visibility.cs",
-              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\util_Visibility.cs",
-              "RelativeToolTip": "util_Visibility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwCoAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CurveTessellation.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\GH_Comp\\CurveTessellation.cs",
+              "RelativeDocumentMoniker": "GH_Comp\\CurveTessellation.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\GH_Comp\\CurveTessellation.cs",
+              "RelativeToolTip": "GH_Comp\\CurveTessellation.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAowFUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T05:54:28.013Z",
+              "WhenOpened": "2024-12-08T14:30:35.926Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 4,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CurveTessellation.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\CurveTessellation.cs",
-              "RelativeDocumentMoniker": "CurveTessellation.cs",
-              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\CurveTessellation.cs",
-              "RelativeToolTip": "CurveTessellation.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA2wEgAAABBAAAAAAAAAA==",
+              "Title": "IsoVist2D.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\GH_Comp\\IsoVist2D.cs",
+              "RelativeDocumentMoniker": "GH_Comp\\IsoVist2D.cs",
+              "ToolTip": "D:\\OneDrive\\Coding\\@Personal_GH_plugins (.sln)\\IsoVistGH\\GH_Comp\\IsoVist2D.cs",
+              "RelativeToolTip": "GH_Comp\\IsoVist2D.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T05:33:33.144Z",
+              "WhenOpened": "2024-12-08T14:29:32.56Z",
               "EditorCaption": ""
             }
           ]

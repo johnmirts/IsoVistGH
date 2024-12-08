@@ -71,9 +71,15 @@ namespace IsoVistGH
         /// </summary>
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA) {
-            DA.TryGetItem(0, out LineCurve crv);
+            if (!DA.TryGetItem(0, out Curve crv)) {
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "The curve input is not valid.");
+                return;
+            }
 
-            DA.TryGetItem(1, out int div_count);
+            if (!DA.TryGetItem(1, out int div_count)) {
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "The divisions input is not valid.");
+                return;
+            }
 
             List<int> curvedIds = Geometry.CurvedSegIDs(crv);
             Message = curvedIds.Count + "x curved segment(s)";
