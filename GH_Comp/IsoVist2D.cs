@@ -13,7 +13,6 @@ namespace IsoVistGH
           : base("IsoVist 2D",
                  "IsoVist2D",
                  "Calculate the isovist polygon",
-                 GH_Exposure.primary,
                  Properties.Resources.icon_question)
         {
         }

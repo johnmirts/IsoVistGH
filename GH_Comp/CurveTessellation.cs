@@ -16,7 +16,6 @@ namespace IsoVistGH
             : base("Curve Tesselation",
                  "CrvTesselation",
                  "Controlled tesselation of curved segments of a curve",
-                 GH_Exposure.primary,
                  Properties.Resources.icon_question) {
         }
 

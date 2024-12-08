@@ -1,17 +1,19 @@
 ﻿using Grasshopper.GUI.Canvas;
 using Grasshopper.Kernel;
 using Grasshopper.Kernel.Attributes;
+using Rhino.Geometry;
+using Rhino;
+using System.Collections.Generic;
+using System;
 using System.Drawing;
 
 namespace IsoVistGH {
     public abstract class BaseComponent : GH_Component {
 
-        private readonly GH_Exposure exposure = GH_Exposure.hidden;
         private readonly Bitmap icon = null;
 
-        public BaseComponent(string _componentName, string _nickname, string _description, GH_Exposure _exposure, Bitmap _icon)
+        public BaseComponent(string _componentName, string _nickname, string _description, Bitmap _icon)
           : base(_componentName, _nickname, _description, "IsoVistGH", "Standard") {
-            exposure = _exposure;
             icon = _icon;
             IconDisplayMode = GH_IconDisplayMode.icon;
         }
@@ -24,10 +26,6 @@ namespace IsoVistGH {
 
         public override void CreateAttributes() {
             base.m_attributes = new BaseComponentAttributes(this);
-        }
-
-        public override GH_Exposure Exposure {
-            get { return exposure; }
         }
 
         protected override Bitmap Icon {
@@ -55,6 +53,34 @@ namespace IsoVistGH {
             }
             else
                 base.Render(canvas, graphics, channel);
+        }
+    }
+    public abstract class HighlightCurveComponent : BaseComponent {
+        // For previewing the domain
+        protected Painter painter;
+
+        // Initializes a new instance of the BaseComponent class
+        public HighlightCurveComponent(string _componentName, string _nickname, string _description, Bitmap _icon)
+          : base(_componentName, _nickname, _description, _icon) {
+            painter = new Painter();
+        }
+
+        // Cleans the scene in order to display the geometries/colors of the model
+        protected override void BeforeSolveInstance() {
+            base.BeforeSolveInstance();
+            painter.Clear();
+        }
+
+        // For displaying the preview Geometry
+        public override BoundingBox ClippingBox { get { return BoundingBox.Union(base.ClippingBox, painter.BoundingBox); } }
+
+        // For displaying the preview Geometry
+        public override void DrawViewportWires(IGH_PreviewArgs args) {
+            base.DrawViewportWires(args);
+            painter.Draw(args);
+        }
+        public override void BakeGeometry(RhinoDoc doc, List<Guid> obj_ids) {
+            painter.Bake(doc, obj_ids);
         }
     }
 }
