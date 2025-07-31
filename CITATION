@@ -1,0 +1,8 @@
+cff-version: 1.0
+title: IsoVistGH
+message: "If you use this software, please cite:"
+authors:
+  - family-names: Mirtsopoulos
+    given-names: Ioannis
+date-released: 2024-12-08
+license: MIT
