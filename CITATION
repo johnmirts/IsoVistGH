@@ -1,9 +1,10 @@
 cff-version: 1.0
-title: IsoVistGH
 message: "If you use this software, please cite:"
 authors:
   - family-names: Mirtsopoulos
     given-names: Ioannis
+orcid: https://orcid.org/0000-0002-3726-8807
+title: IsoVistGH
 date-released: 2024-12-08
 license: MIT
 url: "https://github.com/johnmirts/IsoVistGH"
